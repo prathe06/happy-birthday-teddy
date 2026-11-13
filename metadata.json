@@ -1,0 +1,6 @@
+{
+  "name": "Teddy's Little Birthday Adventure",
+  "description": "A tiny interactive Dudu & Bubu birthday adventure game made just for Teddy.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

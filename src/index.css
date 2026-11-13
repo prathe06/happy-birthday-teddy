@@ -1,0 +1,148 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Fredoka", ui-rounded, "Hiragino Maru Gothic ProN", system-ui, sans-serif;
+  --font-sans: "Nunito", ui-rounded, system-ui, -apple-system, sans-serif;
+  --font-hand: "Caveat", cursive, ui-rounded, sans-serif;
+}
+
+@layer base {
+  html,
+  body {
+    font-family: var(--font-sans);
+    background-color: #FFFDF7;
+    color: #4A3531;
+    overflow-x: hidden;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  h1, h2, h3, .font-display {
+    font-family: var(--font-display);
+  }
+
+  .font-hand {
+    font-family: var(--font-hand);
+  }
+}
+
+@keyframes floatSlow {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+@keyframes heartBob {
+  0%, 100% {
+    transform: translateY(0px) scale(1);
+  }
+  50% {
+    transform: translateY(-6px) scale(1.06);
+  }
+}
+
+@keyframes bearBounce {
+  0%, 100% {
+    transform: translateY(0px) scaleY(1);
+  }
+  50% {
+    transform: translateY(-5px) scaleY(1.02);
+  }
+}
+
+@keyframes bearWalk {
+  0%, 100% {
+    transform: translateY(0px) rotate(-2deg);
+  }
+  50% {
+    transform: translateY(-5px) rotate(2deg);
+  }
+}
+
+@keyframes sparklePulse {
+  0%, 100% {
+    opacity: 0.45;
+    transform: scale(0.85);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.15);
+  }
+}
+
+@keyframes candleFlicker {
+  0%, 100% {
+    transform: scale(1) rotate(-2deg);
+    opacity: 0.95;
+  }
+  50% {
+    transform: scale(1.12) rotate(3deg);
+    opacity: 1;
+  }
+}
+
+@keyframes confettiFall {
+  0% {
+    transform: translateY(-10vh) rotate(0deg);
+    opacity: 1;
+  }
+  85% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(105vh) rotate(540deg);
+    opacity: 0;
+  }
+}
+
+@keyframes popUpFade {
+  0% {
+    transform: translateY(0px) scale(0.8);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-34px) scale(1.15);
+    opacity: 0;
+  }
+}
+
+.animate-float-slow {
+  animation: floatSlow 3.4s ease-in-out infinite;
+}
+
+.animate-heart-bob {
+  animation: heartBob 2s ease-in-out infinite;
+}
+
+.animate-bear-bounce {
+  animation: bearBounce 2.2s ease-in-out infinite;
+}
+
+.animate-bear-walk {
+  animation: bearWalk 0.36s ease-in-out infinite;
+}
+
+.animate-sparkle {
+  animation: sparklePulse 2.4s ease-in-out infinite;
+}
+
+.animate-candle {
+  animation: candleFlicker 0.9s ease-in-out infinite;
+}
+
+.animate-pop-fade {
+  animation: popUpFade 0.85s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-float-slow,
+  .animate-heart-bob,
+  .animate-bear-bounce,
+  .animate-bear-walk,
+  .animate-sparkle,
+  .animate-candle {
+    animation: none !important;
+  }
+}
